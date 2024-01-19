@@ -1,36 +1,36 @@
-// class StringBuilder {
-//   #value = "";
-//   constructor(initialValue) {
-//     this.#value = initialValue;
-//   }
+class StringBuilder {
+  #value = "";
+  constructor(initialValue) {
+    this.#value = initialValue;
+  }
 
-//   getValue() {
-//     return this.#value;
-//   }
+  getValue() {
+    return this.#value;
+  }
 
-//   padEnd(str) {
-//     return this.#value += str;
-//   }
+  padEnd(str) {
+    return this.#value += str;
+  }
 
-//   padStart(str) {
-//     this.#value = str + this.#value;
-//     return this;
-//   }
+  padStart(str) {
+    this.#value = str + this.#value;
+    return this;
+  }
 
-//   padBoth(str) {
-//     this.#value = str + this.#value + str;
-//     return this;
-//   }
-// }
+  padBoth(str) {
+    this.#value = str + this.#value + str;
+    return this;
+  }
+}
 
-// const builder = new StringBuilder(".");
-// console.log(builder.getValue()); // "."
-// builder.padStart("^");
-// console.log(builder.getValue()); // "^."
-// builder.padEnd("^");
-// console.log(builder.getValue()); // "^.^"
-// builder.padBoth("=");
-// console.log(builder.getValue()); // "=^.^="
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
 
 class User {
   email;
